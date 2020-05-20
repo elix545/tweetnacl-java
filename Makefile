@@ -23,7 +23,7 @@ test: compile
 	echo "Build-Date: " `date` >> def.manifest
 	echo "Class-Path: " $(CP_SPACE)>> def.manifest
 	jar -cfm Test.jar def.manifest \
-	    -C build org -C build test
+	    -C build peergos -C build test
 	rm -f def.manifest
 
 .PHONY: jni
